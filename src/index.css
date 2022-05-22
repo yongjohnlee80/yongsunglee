@@ -8,6 +8,20 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 
+font-family: 'Bree Serif', serif;
+font-family: 'DM Serif Display', serif;
+font-family: 'Fira Code', monospace;
+font-family: 'Koulen', cursive;
+font-family: 'Major Mono Display', monospace;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Paytone One', sans-serif;
+
+font-family: 'Odibee Sans', cursive;
+font-family: 'Smooch', cursive;
+*/
