@@ -55,12 +55,12 @@ const resumeActivities = [
 
 const ResumeContent = {
     summary:
-        "I'm a critical thinker and a creative problem solver. Trained as a software engineer with passion to learn and grow with my clients, I welcome fresh challenges that will enhance your marketting and automation.",
+        "I'm a critical thinker and a creative problem solver. Trained as a software engineer with passion to learn and grow with my clients, I welcome fresh challenges that will enhance your marketing needs and automation requirements.",
     experiences: resumeExperiences,
     skills: resumeSkills,
     educations: resumeEducations,
     activities: resumeActivities,
-    slogan: "My goal is to provide you with creative and maintainable Solution by creating reusable components with simple responsibility that represents a part of entire automation flow",
+    slogan: "My goal is to provide you with creative and maintainable solution by creating reusable components with simple responsibility that represents a part of entire automation flow",
 };
 
 export default ResumeContent;

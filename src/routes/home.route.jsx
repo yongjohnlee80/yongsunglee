@@ -35,6 +35,8 @@ const HomeCarousel = () => (
                 <Montserrat.SubTitle
                     style={{
                         fontSize: "1.2rem",
+                        color: "#ffffff",
+                        background: "#30303070",
                     }}
                 >
                     I work smart and relentlessly to meet your requirements and
