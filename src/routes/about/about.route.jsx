@@ -3,67 +3,28 @@ import { Container, Row, Col, Image } from "react-bootstrap";
 import Profile from "../../assets/profile-picture.jpg";
 import { Resume } from "./resume.styles";
 
-const freelanceWorks = [
-    {
-        title: "New Look Autobody Ltd. (2022)",
-        link: "https://www.newlook-autobody.com",
-    },
-];
-
-const resumeExperiences = [
-    {
-        title: "Freelance",
-        company: "",
-        period: "2022 - Present",
-        projects: freelanceWorks,
-    },
-];
-
-const resumeSkills = [
-    "•	C#, C/C++, Java, Python, and JavaScript.",
-    "•	Visual Studio, VS Code, Git, NUnit Framework, React.js, Docker, R Studio, Godot, Firebase, and Netlify.",
-    "•	Critical thinking in analyzing algorithms, data, and design principles.",
-    "•	OOP and design patterns.",
-    "•	Excellent communication skills",
-];
-
-const resumeEducations = [
-    {
-        school: "University of the People",
-        degree: "Bachelor of Science",
-        study: "in Computer Science",
-        grade: "Summa Cum Laude (CGPA: 3.89)",
-        period: "Sept. 2018 - Nov. 2021",
-    },
-    {
-        school: "Harvard Business School Online",
-        degree: "Credential Of REadiness (certificate)",
-        study: "in Business Analytics, Economics for Managers, Financial Accounting",
-        grade: "Pass with High Honors",
-        period: "Jun. 2021 - Sept. 2021 ",
-    },
-];
-
-const resumeContent = {
-    summary:
-        "I'm a critical thinker and creative problem solver. Trained as a software engineer with passion to learn and grow with my clients, I welcome fresh challenges that will enhance your marketting and automation.",
-    experiences: resumeExperiences,
-    skills: resumeSkills,
-    educations: resumeEducations,
-};
+import ResumeContent from "../../data/resume.data";
 
 const ExperienceCard = ({ item }) => {
     const projects = item.projects;
     return (
         <>
-            <Resume.SubTitle>
+            <Resume.Section>
                 {item.title} {item.company}
-            </Resume.SubTitle>
-            <Resume.P>({item.period})</Resume.P>
+            </Resume.Section>
+            <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+                ({item.period})
+            </Resume.P>
             {projects.map((work) => (
                 <div key={work.title}>
                     <Resume.P>{work.title}</Resume.P>
-                    <Resume.Link>{work.link}</Resume.Link>
+                    <Resume.Link
+                        href={work.link}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                        {work.link}
+                    </Resume.Link>
                 </div>
             ))}
         </>
@@ -73,32 +34,52 @@ const ExperienceCard = ({ item }) => {
 const EducationCard = ({ item }) => {
     return (
         <>
-            <Resume.SubTitle>
+            <Resume.Section>
                 {item.degree} - {item.school}
-            </Resume.SubTitle>
-            <Resume.P>({item.period})</Resume.P>
-            <Resume.P>{item.grade} {item.study}</Resume.P>
+            </Resume.Section>
+            <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+                ({item.period})
+            </Resume.P>
+            <Resume.P>
+                {item.grade} {item.study}
+            </Resume.P>
         </>
     );
 };
 
-const SkillCard = ({item}) => {
+const SkillCard = ({ item }) => {
     return (
         <>
             <Resume.P>{item}</Resume.P>
         </>
-    )
-}
+    );
+};
+
+const ActivityCard = ({ item }) => {
+    return (
+        <>
+            <Resume.Section>{item.title}</Resume.Section>
+            <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+                ({item.period})
+            </Resume.P>
+            <Resume.P>{item.desc}</Resume.P>
+            <Resume.Link href={item.link} target="_blank" rel="noreferrer">
+                {item.link}
+            </Resume.Link>
+        </>
+    );
+};
 
 const About = () => {
-    let smLeft = 3,
-        smRight = 9;
+    let smLeft = 4,
+        smRight = 8;
     let sxLeft = 12,
         sxRight = 12;
 
-    const experiences = resumeContent.experiences;
-    const educations = resumeContent.educations;
-    const skills = resumeContent.skills;
+    const experiences = ResumeContent.experiences;
+    const educations = ResumeContent.educations;
+    const skills = ResumeContent.skills;
+    const activities = ResumeContent.activities;
 
     return (
         <>
@@ -111,11 +92,11 @@ const About = () => {
                 }}
             >
                 <Row>
-                    <Col sm={smLeft} xs={sxLeft}>
+                    <Col sm={smLeft - 1} xs={sxLeft}>
                         <Image src={Profile} roundedCircle fluid />
                     </Col>
                     <Col
-                        sm={smRight}
+                        sm={smRight + 1}
                         style={{ paddingLeft: "5rem", paddingTop: "4rem" }}
                     >
                         <Resume.Title>Yong Sung John Lee</Resume.Title>
@@ -125,7 +106,7 @@ const About = () => {
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
                     <Col sm={smLeft} xs={sxRight}>
                         <Resume.SubTitle>SUMMARY</Resume.SubTitle>
-                        <p>{resumeContent.summary}</p>
+                        <Resume.P>{ResumeContent.summary}</Resume.P>
                     </Col>
                     <Col sm={smRight}>
                         <Resume.SubTitle style={{}}>
@@ -141,8 +122,8 @@ const About = () => {
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
                     <Col sm={smLeft} xs={sxLeft}>
                         <Resume.SubTitle>SKILLS</Resume.SubTitle>
-                        {skills.map((item)=>(
-                            <SkillCard key={item} item={item}/>
+                        {skills.map((item) => (
+                            <SkillCard key={item} item={item} />
                         ))}
                     </Col>
                     <Col sm={smRight} xs={sxRight}>
@@ -154,13 +135,22 @@ const About = () => {
                         </div>
                     </Col>
                 </Row>
+                <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
+                    <Col sm={smLeft} xs={sxLeft}></Col>
+                    <Col sm={smRight} xs={sxRight}>
+                        <Resume.SubTitle style={{}}>
+                            PROJECTS/ACTIVITIES
+                        </Resume.SubTitle>
+                        <div>
+                            {activities.map((item) => (
+                                <ActivityCard key={item.title} item={item} />
+                            ))}
+                        </div>
+                    </Col>
+                </Row>
             </Container>
         </>
     );
 };
 
 export default About;
-
-// {cartItems.map((item) => (
-//     <CartItem key={item.id} cartItem={item} />
-// ))}

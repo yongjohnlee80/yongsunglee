@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 
 import logo from "../../assets/apple-touch-icon.png";
+import Footer from "../footer-bar/footer-bar.component";
 
 const Navigation = () => {
     let expand = "md";
@@ -73,6 +74,7 @@ const Navigation = () => {
                 </Container>
             </Navbar>
             <Outlet />
+            <Footer/>
         </>
     );
 };
