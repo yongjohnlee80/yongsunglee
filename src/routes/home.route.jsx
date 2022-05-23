@@ -22,8 +22,8 @@ const HomeCarousel = () => (
                 <Montserrat.Title
                     style={{
                         color: "#ffffff",
-                        backgroundColor: "#ff00ff15",
-                        textShadow: "1px 1px #6d6d14",
+                        backgroundColor: "#55005515",
+                        textShadow: "1px 1px #000000",
                         fontWeight: "bold",
                     }}
                 >
@@ -34,8 +34,7 @@ const HomeCarousel = () => (
                 <Montserrat.SubTitle
                     style={{
                         fontSize: "1.2rem",
-                        textShadow: "1px 1px #6d6d14",
-                        backgroundColor: "#ff00ff20",
+                        backgroundColor: "#55005520",
                     }}
                 >
                     I work smart and relentlessly to meet your requirements and
@@ -104,10 +103,10 @@ const Home = () => {
             <HomeCarousel />
             <div sytle={{padding: "5rem"}}>
                 <h3 style={{margin: "10%", textAlign: "center", color: "#202020aa"}}>
-                    "{ResumeContent.summary}"
+                    {ResumeContent.summary}
                 </h3>
                 <h3 style={{margin: "10%", textAlign: "center", color: "#202020aa"}}>
-                    "{ResumeContent.slogan}"
+                    {ResumeContent.slogan}
                 </h3>
             </div>
         </>

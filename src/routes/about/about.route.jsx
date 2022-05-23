@@ -64,7 +64,7 @@ const ActivityCard = ({ item }) => {
             </Resume.P>
             <Resume.P>{item.desc}</Resume.P>
             <Resume.Link href={item.link} target="_blank" rel="noreferrer">
-                {item.link}
+                Project Link
             </Resume.Link>
         </>
     );
@@ -148,7 +148,7 @@ const About = () => {
                         </div>
                     </Col>
                 </Row>
-                <Row class="py-5"/>
+                <div style={{ padding: "5%" }} />
             </Container>
         </>
     );
