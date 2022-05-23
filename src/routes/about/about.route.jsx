@@ -27,6 +27,7 @@ const ExperienceCard = ({ item }) => {
                     </Resume.Link>
                 </div>
             ))}
+            <div style={{ padding: "1rem" }} />
         </>
     );
 };
@@ -43,6 +44,7 @@ const EducationCard = ({ item }) => {
             <Resume.P>
                 {item.grade} {item.study}
             </Resume.P>
+            <div style={{ padding: "1rem" }} />
         </>
     );
 };
@@ -63,9 +65,12 @@ const ActivityCard = ({ item }) => {
                 ({item.period})
             </Resume.P>
             <Resume.P>{item.desc}</Resume.P>
-            <Resume.Link href={item.link} target="_blank" rel="noreferrer">
-                Project Link
-            </Resume.Link>
+            {item.link && (
+                <Resume.Link href={item.link} target="_blank" rel="noreferrer">
+                    Project Link
+                </Resume.Link>
+            )}
+            <div style={{ padding: "1rem" }} />
         </>
     );
 };
@@ -103,6 +108,7 @@ const About = () => {
                         <Resume.SubTitle>Software Engineer</Resume.SubTitle>
                     </Col>
                 </Row>
+                <div style={{ padding: "2rem" }} />
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
                     <Col sm={smLeft} xs={sxRight}>
                         <Resume.SubTitle>SUMMARY</Resume.SubTitle>

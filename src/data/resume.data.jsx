@@ -44,7 +44,6 @@ const resumeActivities = [
         title: "A 2D Platformer game",
         period: "current",
         desc: "Currently in the process of publishing an indie platfomer game, created with Godot Engine3",
-        link: "",
     },
     {
         title: "Advent of Code 2020",

@@ -3,11 +3,11 @@ import { Carousel } from "react-bootstrap";
 import HomeImg from "../assets/images/code-everywhere.jpg";
 import HomeImg3 from "../assets/images/code-light.jpg";
 import HomeImg2 from "../assets/images/design2.jpg";
-import { MajorMono, Montserrat, FiraCode } from "../styles/text-types.styles";
+import { Koulen, Montserrat, FiraCode } from "../styles/text-types.styles";
 import ResumeContent from "../data/resume.data";
 
 const MAX_HEIGHT = "950px";
-
+const MIN_HEIGHT = "400px";
 
 const HomeCarousel = () => (
     <Carousel fade>
@@ -16,13 +16,14 @@ const HomeCarousel = () => (
                 className="d-block w-100"
                 src={HomeImg}
                 alt="First slide"
-                style={{ maxHeight: MAX_HEIGHT }}
+                style={{ maxHeight: MAX_HEIGHT, minHeight: MIN_HEIGHT }}
             />
-            <Carousel.Caption style={{ marginBottom: "30%" }}>
+            <Carousel.Caption style={{ marginBottom: "25%" }}>
                 <Montserrat.Title
                     style={{
                         color: "#ffffff",
-                        backgroundColor: "#55005515",
+                        background: "#30303070",
+
                         textShadow: "1px 1px #000000",
                         fontWeight: "bold",
                     }}
@@ -34,7 +35,6 @@ const HomeCarousel = () => (
                 <Montserrat.SubTitle
                     style={{
                         fontSize: "1.2rem",
-                        backgroundColor: "#55005520",
                     }}
                 >
                     I work smart and relentlessly to meet your requirements and
@@ -47,20 +47,20 @@ const HomeCarousel = () => (
                 className="d-block w-100"
                 src={HomeImg2}
                 alt="Second slide"
-                style={{ maxHeight: MAX_HEIGHT }}
+                style={{ maxHeight: MAX_HEIGHT, minHeight: MIN_HEIGHT }}
             />
 
-            <Carousel.Caption style={{ marginBottom: "10%" }}>
-                <MajorMono.Title
+            <Carousel.Caption style={{ marginBottom: "5%" }}>
+                <Koulen.Title
                     style={{
-                        color: "#eeee00",
-                        backgroundColor: "#55550030",
+                        color: "#2536ae",
                         textShadow: "1px 1px #303030",
                         fontWeight: "bold",
                     }}
                 >
-                    From planning, design, and development to deployment.
-                </MajorMono.Title>
+                    FROM PLANING, DESIGN, AND DEVELOPMENT TO CONTINOUS
+                    DEPLOYMENT.
+                </Koulen.Title>
             </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -68,7 +68,7 @@ const HomeCarousel = () => (
                 className="d-block w-100"
                 src={HomeImg3}
                 alt="Third slide"
-                style={{ maxHeight: MAX_HEIGHT }}
+                style={{ maxHeight: MAX_HEIGHT, minHeight: MIN_HEIGHT }}
             />
 
             <Carousel.Caption>
@@ -101,11 +101,23 @@ const Home = () => {
     return (
         <>
             <HomeCarousel />
-            <div sytle={{padding: "5rem"}}>
-                <h3 style={{margin: "10%", textAlign: "center", color: "#202020aa"}}>
+            <div sytle={{ padding: "5rem" }}>
+                <h3
+                    style={{
+                        margin: "10%",
+                        textAlign: "center",
+                        color: "#202020aa",
+                    }}
+                >
                     {ResumeContent.summary}
                 </h3>
-                <h3 style={{margin: "10%", textAlign: "center", color: "#202020aa"}}>
+                <h3
+                    style={{
+                        margin: "10%",
+                        textAlign: "center",
+                        color: "#202020aa",
+                    }}
+                >
                     {ResumeContent.slogan}
                 </h3>
             </div>
