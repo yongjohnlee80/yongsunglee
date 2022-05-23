@@ -88,7 +88,7 @@ const About = () => {
                 style={{
                     padding: "1rem",
                     color: "#202020",
-                    backgroundColor: "#00000050",
+                    backgroundColor: "#00000030",
                 }}
             >
                 <Row>
@@ -148,6 +148,7 @@ const About = () => {
                         </div>
                     </Col>
                 </Row>
+                <Row class="py-5"/>
             </Container>
         </>
     );

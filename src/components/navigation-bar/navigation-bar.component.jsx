@@ -10,6 +10,7 @@ import {
 
 import logo from "../../assets/apple-touch-icon.png";
 import Footer from "../footer-bar/footer-bar.component";
+import LinkBar from "../link-bar/link-bar.component";
 
 const Navigation = () => {
     let expand = "md";
@@ -74,6 +75,7 @@ const Navigation = () => {
                 </Container>
             </Navbar>
             <Outlet />
+            <LinkBar/>
             <Footer/>
         </>
     );

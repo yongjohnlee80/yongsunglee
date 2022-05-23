@@ -61,6 +61,7 @@ const ResumeContent = {
     skills: resumeSkills,
     educations: resumeEducations,
     activities: resumeActivities,
+    slogan: "My goal is to provide you with creative and maintainable Solution by creating reusable components with simple responsibility that represents a part of entire automation flow",
 };
 
 export default ResumeContent;

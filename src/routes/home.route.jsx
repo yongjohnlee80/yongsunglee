@@ -4,6 +4,10 @@ import HomeImg from "../assets/images/code-everywhere.jpg";
 import HomeImg3 from "../assets/images/code-light.jpg";
 import HomeImg2 from "../assets/images/design2.jpg";
 import { MajorMono, Montserrat, FiraCode } from "../styles/text-types.styles";
+import ResumeContent from "../data/resume.data";
+
+const MAX_HEIGHT = "950px";
+
 
 const HomeCarousel = () => (
     <Carousel fade>
@@ -12,7 +16,7 @@ const HomeCarousel = () => (
                 className="d-block w-100"
                 src={HomeImg}
                 alt="First slide"
-                style={{ maxHeight: "1080px" }}
+                style={{ maxHeight: MAX_HEIGHT }}
             />
             <Carousel.Caption style={{ marginBottom: "30%" }}>
                 <Montserrat.Title
@@ -44,13 +48,13 @@ const HomeCarousel = () => (
                 className="d-block w-100"
                 src={HomeImg2}
                 alt="Second slide"
-                style={{ maxHeight: "1080px" }}
+                style={{ maxHeight: MAX_HEIGHT }}
             />
 
             <Carousel.Caption style={{ marginBottom: "10%" }}>
                 <MajorMono.Title
                     style={{
-                        color: "#ff0000bb",
+                        color: "#eeee00",
                         backgroundColor: "#55550030",
                         textShadow: "1px 1px #303030",
                         fontWeight: "bold",
@@ -65,7 +69,7 @@ const HomeCarousel = () => (
                 className="d-block w-100"
                 src={HomeImg3}
                 alt="Third slide"
-                style={{ maxHeight: "1080px" }}
+                style={{ maxHeight: MAX_HEIGHT }}
             />
 
             <Carousel.Caption>
@@ -98,6 +102,14 @@ const Home = () => {
     return (
         <>
             <HomeCarousel />
+            <div sytle={{padding: "5rem"}}>
+                <h3 style={{margin: "10%", textAlign: "center", color: "#202020aa"}}>
+                    "{ResumeContent.summary}"
+                </h3>
+                <h3 style={{margin: "10%", textAlign: "center", color: "#202020aa"}}>
+                    "{ResumeContent.slogan}"
+                </h3>
+            </div>
         </>
     );
 };
