@@ -11,23 +11,25 @@ const ExperienceCard = ({ item }) => {
         <>
             <Resume.Container>
                 <Resume.Section>{item.title}</Resume.Section>
-                <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+                <Resume.P style={{ textAlign: "end", marginRight: "3rem" }}>
                     <em>{item.company}</em>
                 </Resume.P>
             </Resume.Container>
-            <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+            <Resume.P style={{ textAlign: "end", marginRight: "3rem" }}>
                 ({item.period})
             </Resume.P>
             {projects.map((work) => (
                 <div key={work.title}>
                     <Resume.P>{work.title}</Resume.P>
-                    <Resume.Link
-                        href={work.link}
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        {work.link}
-                    </Resume.Link>
+                    {work.link && (
+                        <Resume.Link
+                            href={work.link}
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            {work.link}
+                        </Resume.Link>
+                    )}
                 </div>
             ))}
             <div style={{ padding: "1rem" }} />
@@ -40,11 +42,11 @@ const EducationCard = ({ item }) => {
         <>
             <Resume.Container>
                 <Resume.Section>{item.degree} </Resume.Section>
-                <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+                <Resume.P style={{ textAlign: "end", marginRight: "3rem" }}>
                     <em>{item.school}</em>
                 </Resume.P>
             </Resume.Container>
-            <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+            <Resume.P style={{ textAlign: "end", marginRight: "3rem" }}>
                 ({item.period})
             </Resume.P>
             <Resume.P>
@@ -66,10 +68,13 @@ const SkillCard = ({ item }) => {
 const ActivityCard = ({ item }) => {
     return (
         <>
-            <Resume.Section>{item.title}</Resume.Section>
-            <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
-                ({item.period})
-            </Resume.P>
+            <Resume.Container>
+                <Resume.Section>{item.title}</Resume.Section>
+                <Resume.P style={{ textAlign: "end", marginRight: "3rem" }}>
+                    ({item.period})
+                </Resume.P>
+            </Resume.Container>
+
             <Resume.P>{item.desc}</Resume.P>
             {item.link && (
                 <Resume.Link href={item.link} target="_blank" rel="noreferrer">
@@ -124,7 +129,7 @@ const About = () => {
                         <Resume.SubTitle>SUMMARY</Resume.SubTitle>
                         <Resume.P>{ResumeContent.summary}</Resume.P>
                     </Col>
-                    <Col sm={smRight} style={{ paddingBottom: "2rem" }}>
+                    <Col sm={smRight} style={{ paddingBottom: "1rem" }}>
                         <Resume.SubTitle style={{}}>
                             WORK EXPERIENCE
                         </Resume.SubTitle>
@@ -149,7 +154,7 @@ const About = () => {
                     <Col
                         sm={smRight}
                         xs={sxRight}
-                        style={{ paddingBottom: "2rem" }}
+                        style={{ paddingBottom: "1rem" }}
                     >
                         <Resume.SubTitle style={{}}>EDUCATION</Resume.SubTitle>
                         <div>
@@ -164,7 +169,7 @@ const About = () => {
                     <Col
                         sm={smRight}
                         xs={sxRight}
-                        style={{ paddingBottom: "2rem" }}
+                        style={{ paddingBottom: "1rem" }}
                     >
                         <Resume.SubTitle style={{}}>
                             PROJECTS/ACTIVITIES

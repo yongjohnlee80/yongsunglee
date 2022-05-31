@@ -4,7 +4,6 @@ import HomeImg from "../assets/images/code-dark.jpg";
 import HomeImg3 from "../assets/images/code-light.jpg";
 import HomeImg2 from "../assets/images/design2.jpg";
 import { Koulen, Montserrat, FiraCode } from "../styles/text-types.styles";
-import ResumeContent from "../data/resume.data";
 
 const MAX_HEIGHT = "950px";
 const MIN_HEIGHT = "400px";
