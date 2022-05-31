@@ -1,5 +1,8 @@
-
 import { LinkBarStyle } from "./link-bar.styles";
+import { Image } from "react-bootstrap";
+
+import GithubIcon from "../../assets/github.svg";
+import LinkedInIcon from "../../assets/linkedin.svg";
 
 const LinkBar = () => {
     const LinkedInAddr =
@@ -9,10 +12,24 @@ const LinkBar = () => {
         <>
             <LinkBarStyle.Container>
                 <LinkBarStyle.Item>
-                    <LinkBarStyle.Link href={GitHubAddr} target="_blank" rel="noreferrer">GitHub</LinkBarStyle.Link>
+                    <Image src={GithubIcon} height="30px" />
+                    <LinkBarStyle.Link
+                        href={GitHubAddr}
+                        target="_blank"
+                        rel="noreferrer"
+                    >{" "}
+                        GitHub
+                    </LinkBarStyle.Link>
                 </LinkBarStyle.Item>
                 <LinkBarStyle.Item>
-                    <LinkBarStyle.Link href={LinkedInAddr} target="_blank" rel="noreferrer">LinkedIn</LinkBarStyle.Link>
+                    <Image src={LinkedInIcon} height="30px" />
+                    <LinkBarStyle.Link
+                        href={LinkedInAddr}
+                        target="_blank"
+                        rel="noreferrer"
+                    >{" "}
+                        LinkedIn
+                    </LinkBarStyle.Link>
                 </LinkBarStyle.Item>
             </LinkBarStyle.Container>
         </>

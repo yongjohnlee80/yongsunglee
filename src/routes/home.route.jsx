@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 
-import HomeImg from "../assets/images/code-everywhere.jpg";
+import HomeImg from "../assets/images/code-dark.jpg";
 import HomeImg3 from "../assets/images/code-light.jpg";
 import HomeImg2 from "../assets/images/design2.jpg";
 import { Koulen, Montserrat, FiraCode } from "../styles/text-types.styles";
@@ -111,16 +111,7 @@ const Home = () => {
                         color: "#202020aa",
                     }}
                 >
-                    {ResumeContent.summary}
-                </h3>
-                <h3
-                    style={{
-                        margin: "10%",
-                        textAlign: "center",
-                        color: "#202020aa",
-                    }}
-                >
-                    {ResumeContent.slogan}
+                    Trained as a software engineer with passion to learn and grow, I welcome fresh challenges that will enhance your marketing needs and automation requirements. My goal is to provide you with creative and maintainable solution.
                 </h3>
             </div>
         </>

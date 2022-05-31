@@ -3,10 +3,10 @@ import { Container } from "react-bootstrap";
 const Footer = () => {
     return (
         <>
-            <div class="py-4 bg-dark">
+            <div className="py-4 bg-dark">
                 <Container className="px-4">
                     <p
-                        class="text-center text-white"
+                        className="text-center text-white"
                         style={{
                             fontFamily: "Bree Serif",
                         }}

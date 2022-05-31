@@ -110,11 +110,11 @@ const About = () => {
                 </Row>
                 <div style={{ padding: "2rem" }} />
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
-                    <Col sm={smLeft} xs={sxRight}>
+                    <Col sm={smLeft} xs={sxRight} style={{ paddingBottom: "4rem" }}>
                         <Resume.SubTitle>SUMMARY</Resume.SubTitle>
                         <Resume.P>{ResumeContent.summary}</Resume.P>
                     </Col>
-                    <Col sm={smRight}>
+                    <Col sm={smRight} style={{ paddingBottom: "2rem" }}>
                         <Resume.SubTitle style={{}}>
                             WORK EXPERIENCE
                         </Resume.SubTitle>
@@ -126,13 +126,13 @@ const About = () => {
                     </Col>
                 </Row>
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
-                    <Col sm={smLeft} xs={sxLeft}>
+                    <Col sm={smLeft} xs={sxLeft} style={{ paddingBottom: "4rem" }}>
                         <Resume.SubTitle>SKILLS</Resume.SubTitle>
                         {skills.map((item) => (
                             <SkillCard key={item} item={item} />
                         ))}
                     </Col>
-                    <Col sm={smRight} xs={sxRight}>
+                    <Col sm={smRight} xs={sxRight} style={{ paddingBottom: "2rem" }}>
                         <Resume.SubTitle style={{}}>EDUCATION</Resume.SubTitle>
                         <div>
                             {educations.map((item) => (
@@ -143,7 +143,7 @@ const About = () => {
                 </Row>
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
                     <Col sm={smLeft} xs={sxLeft}></Col>
-                    <Col sm={smRight} xs={sxRight}>
+                    <Col sm={smRight} xs={sxRight} style={{ paddingBottom: "2rem" }}>
                         <Resume.SubTitle style={{}}>
                             PROJECTS/ACTIVITIES
                         </Resume.SubTitle>
