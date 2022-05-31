@@ -9,9 +9,12 @@ const ExperienceCard = ({ item }) => {
     const projects = item.projects;
     return (
         <>
-            <Resume.Section>
-                {item.title} {item.company}
-            </Resume.Section>
+            <Resume.Container>
+                <Resume.Section>{item.title}</Resume.Section>
+                <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+                    <em>{item.company}</em>
+                </Resume.P>
+            </Resume.Container>
             <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
                 ({item.period})
             </Resume.P>
@@ -35,9 +38,12 @@ const ExperienceCard = ({ item }) => {
 const EducationCard = ({ item }) => {
     return (
         <>
-            <Resume.Section>
-                {item.degree} - {item.school}
-            </Resume.Section>
+            <Resume.Container>
+                <Resume.Section>{item.degree} </Resume.Section>
+                <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
+                    <em>{item.school}</em>
+                </Resume.P>
+            </Resume.Container>
             <Resume.P style={{ textAlign: "end", marginRight: "4rem" }}>
                 ({item.period})
             </Resume.P>
@@ -110,7 +116,11 @@ const About = () => {
                 </Row>
                 <div style={{ padding: "2rem" }} />
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
-                    <Col sm={smLeft} xs={sxRight} style={{ paddingBottom: "4rem" }}>
+                    <Col
+                        sm={smLeft}
+                        xs={sxRight}
+                        style={{ paddingBottom: "4rem" }}
+                    >
                         <Resume.SubTitle>SUMMARY</Resume.SubTitle>
                         <Resume.P>{ResumeContent.summary}</Resume.P>
                     </Col>
@@ -126,13 +136,21 @@ const About = () => {
                     </Col>
                 </Row>
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
-                    <Col sm={smLeft} xs={sxLeft} style={{ paddingBottom: "4rem" }}>
+                    <Col
+                        sm={smLeft}
+                        xs={sxLeft}
+                        style={{ paddingBottom: "4rem" }}
+                    >
                         <Resume.SubTitle>SKILLS</Resume.SubTitle>
                         {skills.map((item) => (
                             <SkillCard key={item} item={item} />
                         ))}
                     </Col>
-                    <Col sm={smRight} xs={sxRight} style={{ paddingBottom: "2rem" }}>
+                    <Col
+                        sm={smRight}
+                        xs={sxRight}
+                        style={{ paddingBottom: "2rem" }}
+                    >
                         <Resume.SubTitle style={{}}>EDUCATION</Resume.SubTitle>
                         <div>
                             {educations.map((item) => (
@@ -143,7 +161,11 @@ const About = () => {
                 </Row>
                 <Row style={{ paddingTop: "2rem", paddingLeft: "1rem" }}>
                     <Col sm={smLeft} xs={sxLeft}></Col>
-                    <Col sm={smRight} xs={sxRight} style={{ paddingBottom: "2rem" }}>
+                    <Col
+                        sm={smRight}
+                        xs={sxRight}
+                        style={{ paddingBottom: "2rem" }}
+                    >
                         <Resume.SubTitle style={{}}>
                             PROJECTS/ACTIVITIES
                         </Resume.SubTitle>

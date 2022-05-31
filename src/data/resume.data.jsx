@@ -7,16 +7,24 @@ const freelanceWorks = [
 
 const resumeExperiences = [
     {
-        title: "Freelance",
+        title: "Freelancer",
         company: "",
         period: "2022 - Present",
         projects: freelanceWorks,
     },
+    {
+        title: "Sr. Technician",
+        company: "Dozyn Dezyn Properties",
+        period: "June 2015 - October 2021",
+        projects: [
+            {title: "Running day to day operations: scheduling and conducting inspections, maintenances, repairs, overseeing contractors, and handling tenant complaints.",}
+        ],
+    }
 ];
 
 const resumeSkills = [
     "•	C#, C/C++, Java, Python, and JavaScript.",
-    "•	Visual Studio, VS Code, Git, NUnit Framework, React.js, Docker, R Studio, Godot, Firebase, and Netlify.",
+    "•	Visual Studio, VS Code, Git, NUnit Framework, React, Node, jQuery, Express.js, Docker, R Studio, Godot, Firebase, and Netlify.",
     "•	Critical thinking in analyzing algorithms, data, and design principles.",
     "•	OOP and design patterns.",
     "•	Excellent communication skills",
@@ -31,7 +39,7 @@ const resumeEducations = [
         period: "Sept. 2018 - Nov. 2021",
     },
     {
-        school: "Harvard Business School Online",
+        school: "Harvard Business School",
         degree: "Credential Of REadiness (certificate)",
         study: "in Business Analytics, Economics for Managers, Financial Accounting",
         grade: "Pass with High Honors",
@@ -55,12 +63,12 @@ const resumeActivities = [
 
 const ResumeContent = {
     summary:
-        "I'm a critical thinker and a creative problem solver. Trained as a software engineer with passion to learn and grow with my clients, I welcome fresh challenges that will enhance your marketing needs and automation requirements.",
+        "I'm a critical thinker and a creative problem solver. Trained as a software engineer with passion to learn and grow, I welcome fresh challenges that will enhance your marketing needs and automation requirements.",
     experiences: resumeExperiences,
     skills: resumeSkills,
     educations: resumeEducations,
     activities: resumeActivities,
-    slogan: "My goal is to provide you with creative and maintainable solution by creating reusable components with simple responsibility that represents a part of entire automation flow",
+    slogan: "My goal is to provide you with creative and maintainable solution via reusable components with a simple responsibility that represents a part of entire automation flow",
 };
 
 export default ResumeContent;

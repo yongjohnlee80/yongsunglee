@@ -20,4 +20,15 @@ export const Resume = {
         margin-left: 2rem;
         color: #2020aa;
     `,
+    Container: styled.div`
+        min-width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 auto;
+        flex-grow: 2;
+        justify-content: space-between;
+
+        overflow: hidden;
+        text-align: center;
+    `,
 };
