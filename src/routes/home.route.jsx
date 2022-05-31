@@ -111,7 +111,7 @@ const Home = () => {
                         color: "#202020aa",
                     }}
                 >
-                    Trained as a software engineer with passion to learn and grow, I welcome fresh challenges that will enhance your marketing needs and automation requirements. My goal is to provide you with creative and maintainable solution.
+                    Trained as a software engineer with passion to learn and grow, I welcome challenges that will enhance your marketing and automation requirements. My goal is to provide you with creative and maintainable solution.
                 </h3>
             </div>
         </>
