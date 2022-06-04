@@ -19,8 +19,10 @@ const ExperienceCard = ({ item }) => {
                 ({item.period})
             </Resume.P>
             {projects.map((work) => (
+                <>
                 <div key={work.title}>
-                    <Resume.P>{work.title}</Resume.P>
+                    <Resume.P style={{fontWeight:"bold"}}>{work.title}</Resume.P>
+                    <Resume.P>{work.stack}</Resume.P>
                     {work.link && (
                         <Resume.Link
                             href={work.link}
@@ -31,6 +33,8 @@ const ExperienceCard = ({ item }) => {
                         </Resume.Link>
                     )}
                 </div>
+                <div style={{paddingTop:"2rem"}}/>
+                </>
             ))}
             <div style={{ padding: "1rem" }} />
         </>

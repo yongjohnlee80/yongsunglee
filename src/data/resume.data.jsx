@@ -1,8 +1,15 @@
 const freelanceWorks = [
     {
+        title: "Rick McNary. (June, 2022)",
+        stack: "{JS, HTML5, CSS, SCSS, React, Next.js & Bootstrap}",
+        link: "https://www.RickMcNary.com",
+    },
+    {
         title: "New Look Autobody Ltd. (May, 2022)",
+        stack: "{Javascript, HTML5, StyledComponent & React}",
         link: "https://www.newlook-autobody.com",
     },
+
 ];
 
 const resumeExperiences = [
