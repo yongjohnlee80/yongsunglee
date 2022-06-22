@@ -1,5 +1,10 @@
 const freelanceWorks = [
     {
+        title: "Dr. Divina Dental Clinic. (June, 2022)",
+        stack: "{Next.js, React, Sass, HTML5, CSS3}",
+        link: "https://www.DrDivinaMcNary.com"
+    },
+    {
         title: "Rick McNary. (June, 2022)",
         stack: "{JS, HTML5, CSS, SCSS, React, Next.js & Bootstrap}",
         link: "https://www.RickMcNary.com",
@@ -31,7 +36,7 @@ const resumeExperiences = [
 
 const resumeSkills = [
     "•	C#, C/C++, Java, Python, and JavaScript.",
-    "•	Visual Studio, VS Code, Git, NUnit Framework, React, Node, jQuery, Express.js, Docker, R Studio, Godot, Firebase, and Netlify.",
+    "•	Visual Studio, VS Code, Git, NUnit Framework, React, Node, jQuery, Express.js, Next.js, Docker, R Studio, Godot, Firebase, and Netlify.",
     "•	Critical thinking in analyzing algorithms, data, and design principles.",
     "•	OOP and design patterns.",
     "•	Excellent communication skills",
