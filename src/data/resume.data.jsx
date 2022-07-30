@@ -1,5 +1,15 @@
 const freelanceWorks = [
     {
+        title: "Charles Nam PREC. (July, 2022)",
+        stack: "{WP, PHP, Javascript, HTML5, MySQL}",
+        link: "https://www.CharlesNam.ca"
+    },
+    {
+        title: "Yoon Hye Bible WebApp. (July, 2022)",
+        stack: "{Angular, Firebase, TailwindCSS, RxJS, ngxMask, HTML5, bible-api.com APIs}",
+        link: "https://www.yoonhyebible.com"
+    },
+    {
         title: "Dr. Divina Dental Clinic. (June, 2022)",
         stack: "{Next.js, React, Sass, HTML5, CSS3}",
         link: "https://www.DrDivinaMcNary.com"
